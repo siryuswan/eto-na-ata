@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(rizalbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    width: 200px;
+    margin: 20px;
+}
+
+.quiz {
+    width: 80%;
+    max-width: 600px;
+    justify-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid green;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.quiz h1 {
+    font-size: 35px;
+    color: lightgreen;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+.quiz h3 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+.questions {
+    height: auto;
+    width: 100%;
+    align-content: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+.choices {
+    margin: 5px;
+    width: 100%;
+}
+
+.choices ul {
+    list-style: none;
+    padding: 0;
+}
+
+.choices ul li {
+    margin-bottom: 10px;
+}
+
+.choices ul li button {
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid green;
+    margin: 2px;
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.choices ul li button:hover {
+    background: lightgrey;
+}
+
+.bottom-part {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.bottom-part button {
+    width: 150px;
+    height: 40px;
+    background-color: #00e68a;
+    border: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.bottom-part button:hover {
+    background-color: #00cc7a;
+}
+
+.bottom-part button a {
+    text-decoration: none;
+    color: white;
+}
+
+/* New styles for answer buttons */
+.btn {
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid green;
+    margin: 2px;
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: lightgrey;
+}
+
+/* Styles for correct and wrong answers */
+.correct {
+    background-color: lightgreen;
+}
+
+.wrong {
+    background-color: lightcoral;
+}
+
+
+@media (max-width: 768px) {
+    .quiz {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .quiz h1 {
+        font-size: 28px;
+    }
+
+    .quiz h3 {
+        font-size: 18px;
+    }
+
+    .choices ul li button {
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .bottom-part button {
+        width: 130px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .quiz h1 {
+        font-size: 24px;
+    }
+
+    .quiz h3 {
+        font-size: 16px;
+    }
+
+    .choices ul li button {
+        font-size: 12px;
+        height: 35px;
+    }
+
+    .bottom-part button {
+        width: 120px;
+        height: 30px;
+        font-size: 12px;
+    }
+}

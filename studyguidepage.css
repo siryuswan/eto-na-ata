@@ -1,0 +1,203 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('logins.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+.studypage_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.study_guide_title {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(#21cc37, #1d992d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.Topics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 25px;
+    color: white;
+}
+
+.Topics ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Topics ul li {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Topics ul li input[type="checkbox"] {
+    margin-left: 10px;
+}
+.Topics ul li:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.Topics a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.Topics a:hover {
+    text-decoration: underline;
+    color: lightgreen;
+}
+
+.Topics h1{
+    font-size: 50px;
+}
+
+.Topics span {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    justify-self: center;
+    margin-bottom: 10px;
+}
+
+.PHILO-MDLS, .UCSP-1-MDLS, .CPAR-MDLS, .HOPE-1-MDLS, .MIL-1-MDLS, .philo-2-MDLS, .UCSP-MDLS, .CPAR-2-MDLS, .HOPE-2-MDLS, .MIL-2-MDLS {
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    max-width: 90vw; /* Ensure the dropdown fits within the viewport */
+    overflow-x: auto; /* Add horizontal scroll if needed */
+    transition: opacity 0.2s ease-out; /* Add transition for fade-out effect */
+    opacity: 0; /* Initially hidden */
+}
+
+.PHILO-MDLS ul li, .UCSP-1-MDLS ul li, .CPAR-MDLS ul li, .HOPE-1-MDLS ul li, .MIL-1-MDLS ul li, .philo-2-MDLS ul li, .UCSP-MDLS ul li, .CPAR-2-MDLS ul li, .HOPE-2-MDLS ul li, .MIL-2-MDLS ul li {
+    border: 1px solid darkgreen;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    margin: 5px 0;
+}
+
+/*SECOND SEM*/
+
+.ENTREP-1-MDLS, .FSPL-1-MDLS, .EAPP-1-MDLS, .ENTREP-2-MDLS, .FSPL-2-MDLS, .EAPP-2-MDLS {
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    max-width: 90vw; /* Ensure the dropdown fits within the viewport */
+    overflow-x: auto; /* Add horizontal scroll if needed */
+    transition: opacity 0.2s ease-out; /* Add transition for fade-out effect */
+    opacity: 0; /* Initially hidden */
+}
+
+.ENTREP-1-MDLS ul li, .FSPL-1-MDLS ul li, .EAPP-1-MDLS ul li, .ENTREP-2-MDLS ul li, .FSPL-2-MDLS ul li, .EAPP-2-MDLS ul li {
+    border: 1px solid darkgreen;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    margin: 5px 0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 675px) {
+    .study_guide_title {
+        font-size: 20px;
+        height: 60px;
+    }
+
+    .Topics {
+        flex-direction: column;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    .Topics span {
+        font-size: 25px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    .Topics ul li {
+        width: 100%;
+    }
+
+    .PHILO-MDLS, .UCSP-1-MDLS, .CPAR-MDLS, .HOPE-1-MDLS, .MIL-1-MDLS, .philo-2-MDLS, .UCSP-MDLS, .CPAR-2-MDLS, .HOPE-2-MDLS, .MIL-2-MDLS,
+    .ENTREP-1-MDLS, .FSPL-1-MDLS, .EAPP-1-MDLS, .ENTREP-2-MDLS, .FSPL-2-MDLS, .EAPP-2-MDLS {
+        position: static;
+        max-width: 100%;
+        overflow-x: visible;
+    }
+}
+
+@media (max-width: 480px) {
+    .study_guide_title {
+        font-size: 18px;
+        height: 50px;
+    }
+
+    .Topics {
+        font-size: 18px;
+    }
+
+    .Topics span {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    span h1 {
+        font-size: 30px;
+    }
+
+    .Topics ul li {
+        width: 100%;
+    }
+
+    .PHILO-MDLS, .UCSP-1-MDLS, .CPAR-MDLS, .HOPE-1-MDLS, .MIL-1-MDLS, .philo-2-MDLS, .UCSP-MDLS, .CPAR-2-MDLS, .HOPE-2-MDLS, .MIL-2-MDLS,
+    .ENTREP-1-MDLS, .FSPL-1-MDLS, .EAPP-1-MDLS, .ENTREP-2-MDLS, .FSPL-2-MDLS, .EAPP-2-MDLS {
+        position: static;
+        max-width: 100%;
+        overflow-x: visible;
+    }
+}

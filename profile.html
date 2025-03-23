@@ -1,0 +1,115 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+    <link rel="stylesheet" href="Profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <h1>STUTOPIA</h1>
+    </header>
+  
+<div class="container">
+    <div class="aside" id="aside">
+        <i class="fas fa-times" id="X" onclick="hideMenu()"></i>
+        <ul>
+            <li><i class="fas fa-user-circle"></i></li>
+            <li>Username:</li>
+            <li>Email:</li>
+            <div class="dropdown">
+                <button onclick="toggleSettings()"><li>Settings</li></button>
+                <div class="settings-content" id="settingsContent">
+                    <a href="c-pass">Change password</a>
+                    <a href="c-username">Change username</a>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <i class="fas fa-bars" id="BARS" onclick="showMenu()"></i>
+    <div class="mains">
+        <div class="main1">
+            <h1>Not yet started</h1>
+            <ul>
+                <h2>First Quarter</h2>
+                <li>Philosophy</li>
+                <li>UCSP</li>
+                <li>CPAR</li>
+                <li>HOPE</li>
+                <li>MIL</li>
+                <li>Entrepreneurship</li>
+                <li>FSPL</li>
+                <li>EAPP</li>
+                <h2>Second Quarter</h2>
+                <li>Philosophy</li>
+                <li>UCSP</li>
+                <li>CPAR</li>
+                <li>HOPE</li>
+                <li>MIL</li>
+                <li>Entrepreneurship</li>
+                <li>FSPL</li>
+                <li>EAPP</li>
+                <h2>Third Quarter</h2>
+                <li>Entrepreneurship</li>
+                <li>FSPL</li>
+                <li>EAPP</li>
+                <h2>Fourth Quarter</h2>
+                <li>Entrepreneurship</li>
+                <li>FSPL</li>
+                <li>EAPP</li>
+            </ul>
+        </div>
+        <div class="main2">
+            <h1>Completed</h1>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+        </div>
+
+        <div class="main3">
+            <h1>Scores</h1>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+    </div>
+    
+</div>
+
+<script>
+    var aside = document.getElementById("aside");
+    var settingsContent = document.getElementById("settingsContent");
+
+    function showMenu(){
+        aside.style.left = "0";
+    }
+    function hideMenu(){
+        aside.style.left = "-400px";
+    }
+    function toggleSettings() {
+        if (settingsContent.style.display === "block") {
+            settingsContent.style.display = "none";
+        } else {
+            settingsContent.style.display = "block";
+        }
+    }
+</script>
+    
+</body>
+</html>

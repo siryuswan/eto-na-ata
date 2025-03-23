@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stutopia Signup</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="signup_container">
+        <div class="signup_title">
+            <h1>Sign up</h1>
+        </div>
+        <form action="home.html">
+            <div class="signup_email">
+                <input type="email" id="Email" required placeholder="Email">
+                <i class="fa fa-envelope"></i>
+            </div>
+            <div class="signupusername">
+                <input type="text" id="username" required minlength="4" maxlength="12" placeholder="Username">
+                <i class="fa fa-user"></i>
+            </div>
+            <div class="password">
+                <input type="password" id="password" required minlength="8" maxlength="12" placeholder="Password">
+                <img src="eye-crossed.png" id="eyeiconclosed" alt="Toggle visibility">
+                <i class="fa fa-lock"></i>
+            </div>
+            <div class="signupconpass">
+                <input type="password" id="confirmpass" required minlength="8" maxlength="12" placeholder="Confirm Password">
+                <i class="fa fa-lock"></i>
+            </div>
+            <div class="register">
+                <input type="submit" name="submit" value="Register">
+            </div>
+        </form>
+    </div>
+    <script>
+        let eyeiconclosed = document.getElementById("eyeiconclosed");
+        let password = document.getElementById("password");
+        let email = document.getElementById("Email");
+        let username = document.getElementById("username");
+        let confirmpass = document.getElementById("confirmpass");
+        let emailIcon = document.querySelector(".signup_email i");
+        let userIcon = document.querySelector(".signupusername i");
+        let lockIcon = document.querySelector(".password i");
+        let confirmLockIcon = document.querySelector(".signupconpass i");
+
+        eyeiconclosed.onclick = function() {
+            if (password.type == "password") {
+                password.type = "text";
+                eyeiconclosed.src = "eye.png";
+            } else {
+                password.type = "password";
+                eyeiconclosed.src = "eye-crossed.png";
+            }
+        }
+
+        email.addEventListener("focus", function() {
+            emailIcon.style.display = "none";
+        });
+
+        email.addEventListener("blur", function() {
+            if (email.value === "") {
+                emailIcon.style.display = "block";
+            }
+        });
+
+        username.addEventListener("focus", function() {
+            userIcon.style.display = "none";
+        });
+
+        username.addEventListener("blur", function() {
+            if (username.value === "") {
+                userIcon.style.display = "block";
+            }
+        });
+
+        password.addEventListener("focus", function() {
+            lockIcon.style.display = "none";
+        });
+
+        password.addEventListener("blur", function() {
+            if (password.value === "") {
+                lockIcon.style.display = "block";
+            }
+        });
+
+        confirmpass.addEventListener("focus", function() {
+            confirmLockIcon.style.display = "none";
+        });
+
+        confirmpass.addEventListener("blur", function() {
+            if (confirmpass.value === "") {
+                confirmLockIcon.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>

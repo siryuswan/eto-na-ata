@@ -1,0 +1,206 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('logins.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#21cc37, #1d992d);
+    color: white;
+    font-size: 40px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: 
+    "aside mains";
+    gap: 20px;
+    padding: 20px;
+}
+
+.aside {
+    grid-area: aside;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.aside #X {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#BARS {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.aside ul {
+    list-style: none;
+}
+
+.aside ul li {
+    margin: 10px 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.aside i {
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+.aside ul button {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.settings-content {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.settings-content a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+}
+
+.dropdown a:hover {
+    background: forestgreen;
+}
+
+.mains {
+    grid-area: mains;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.main1, .main2, .main3 {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+    max-height: 700px;
+    overflow-y: auto;
+}
+
+.main1 h1, .main2 h1, .main3 h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main1 ul li, .main2 ul li, .main3 ul li {
+    list-style: none;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.main1::-webkit-scrollbar, .main2::-webkit-scrollbar, .main3::-webkit-scrollbar {
+    width: 10px;
+}
+
+.main1::-webkit-scrollbar-thumb, .main2::-webkit-scrollbar-thumb, .main3::-webkit-scrollbar-thumb {
+    background: #21cc37;
+    border-radius: 10px;
+}
+
+.main1::-webkit-scrollbar-track, .main2::-webkit-scrollbar-track, .main3::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 930px) {
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .container {
+        display: block;
+    }
+
+    #BARS {
+        display: block;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .mains {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aside {
+        display: block;
+        position: absolute;
+        width: 200px;
+        font-size: 20px;
+        z-index: 2;
+        padding: 10px;
+        transition: 0.5s;
+    }
+
+    .aside #X {
+        display: block;
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(rizalbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+img{
+    width: 300px;
+    margin: 10px;
+}
+
+.quiz-container{
+    width: 600px;
+    justify-items: center;
+    height: 200px;
+    border-radius: 15px;
+    background: none;
+    backdrop-filter: blur(35px);
+    border: 1px solid green;
+}
+
+.quiz-container input{
+    margin: 10px;
+    text-align: center;
+}
+.quiz-container h1{
+    font-size: 35px;
+    color: lightgreen;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.quiz-container h3{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-self: center;
+}
+
+.questions{
+    height: 50px;
+    width: 550px;
+    align-self: center;
+}
+
+
+.bottom-part{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-part button{
+    width: 70px;
+    height: 30px;
+    background-color: #00e68a;
+    border: none;
+    width: 150px;
+    font-size: 15px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.bottom-part button:hover{
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.bottom-part button a{
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .quiz-container {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .quiz-container h1 {
+        font-size: 28px;
+    }
+
+    .quiz-container h3 {
+        font-size: 18px;
+    }
+
+    .questions {
+        width: 90%;
+    }
+
+    .bottom-part {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-part button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz-container {
+        width: 95%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .quiz-container h1 {
+        font-size: 24px;
+    }
+
+    .quiz-container h3 {
+        font-size: 16px;
+    }
+
+    .questions {
+        width: 95%;
+    }
+
+    .bottom-part {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-part button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+    
+

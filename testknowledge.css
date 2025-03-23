@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.testurknowledge_title {
+    background: green;
+    height: 80px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-items: center;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    justify-self: center;
+    padding: 10px;
+    color: darkgreen;
+}
+
+h2:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+h1 {
+    justify-self: center;
+}
+
+h3 {
+    justify-self: center;
+}
+
+.Subjects {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+span {
+    font-size: 25px;
+}
+
+ul li {
+    padding: 10px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 14px;
+}
+
+button {
+    margin: 10px 0;
+    padding: 5px 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+@media (max-width: 768px) {
+    .testurknowledge_title {
+        font-size: 24px;
+        height: 60px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    span {
+        font-size: 20px;
+    }
+
+    ul li {
+        padding: 8px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testurknowledge_title {
+        font-size: 20px;
+        height: 50px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    span {
+        font-size: 18px;
+    }
+
+    ul li {
+        padding: 6px;
+    }
+
+    label {
+        font-size: 10px;
+    }
+
+    button {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+}
