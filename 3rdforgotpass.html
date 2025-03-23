@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stutopia Forgot Password?</title>
+    <link rel="stylesheet" href="3rdforgotpass.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="fp-container">
+        <div class="fp_title">
+            <h1>Forgot password?</h1>
+        </div>
+        <form action="index.html">
+            <div class="Newpass">
+                <input type="password" id="password" required minlength="8" maxlength="12" placeholder="New password">
+                <img src="eye-crossed.png" id="eyeiconclosed" alt="Toggle visibility">
+                <i class="fa fa-lock"></i>
+            </div>
+            <div class="conpass">
+                <input type="password" id="conpass" required minlength="8" maxlength="12" placeholder="Confirm password">
+                <i class="fa fa-lock"></i>
+            </div>
+            <div class="email">
+                <input type="email" id="email" required placeholder="Email">
+                <i class="fa fa-envelope"></i>
+            </div>
+            <div class="reg_button">
+                <input type="submit" name="register" value="Change Password">
+            </div>
+        </form>
+    </div>
+    <script>
+        let eyeiconclosed = document.getElementById("eyeiconclosed");
+        let password = document.getElementById("password");
+        let conpass = document.getElementById("conpass");
+        let email = document.getElementById("email");
+        let lockIcon = document.querySelector(".Newpass i");
+        let confirmLockIcon = document.querySelector(".conpass i");
+        let emailIcon = document.querySelector(".email i");
+
+        eyeiconclosed.onclick = function() {
+            if (password.type == "password") {
+                password.type = "text";
+                eyeiconclosed.src = "eye.png";
+            } else {
+                password.type = "password";
+                eyeiconclosed.src = "eye-crossed.png";
+            }
+        }
+
+        password.addEventListener("focus", function() {
+            lockIcon.style.display = "none";
+        });
+
+        password.addEventListener("blur", function() {
+            if (password.value === "") {
+                lockIcon.style.display = "block";
+            }
+        });
+
+        conpass.addEventListener("focus", function() {
+            confirmLockIcon.style.display = "none";
+        });
+
+        conpass.addEventListener("blur", function() {
+            if (conpass.value === "") {
+                confirmLockIcon.style.display = "block";
+            }
+        });
+
+        email.addEventListener("focus", function() {
+            emailIcon.style.display = "none";
+        });
+
+        email.addEventListener("blur", function() {
+            if (email.value === "") {
+                emailIcon.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>

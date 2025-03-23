@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('logins.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fpass {
+    width: 450px;
+    padding: 30px 40px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fpass h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.fpass p {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.email-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.email-container input {
+    width: 100%;
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: 2px solid #21cc37;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.email-container input:focus {
+    border-color: #1d992d;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+::placeholder {
+    color: #ddd;
+    padding: 10px;
+}
+
+.email-container i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #21cc37;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    background: #21cc37;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #1d992d;
+}
+
+@media (max-width: 400px) {
+    .fpass {
+        width: 90%;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .fpass h1 {
+        font-size: 2rem;
+    }
+
+    .email-container input {
+        padding: 10px 15px;
+    }
+
+    button {
+        padding: 10px;
+    }
+}

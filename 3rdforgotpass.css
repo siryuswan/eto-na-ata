@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('logins.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fp-container {
+    width: 450px;
+    padding: 30px 40px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fp_title h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.Newpass, .conpass, .email {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.Newpass input, .conpass input, .email input {
+    width: 100%;
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: 2px solid #21cc37;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.Newpass input:focus, .conpass input:focus, .email input:focus {
+    border-color: #1d992d;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+::placeholder {
+    color: #ddd;
+    padding: 10px;
+}
+
+.Newpass i, .conpass i, .email i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #21cc37;
+}
+
+.Newpass img {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 30px;
+}
+
+.reg_button input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    background: #21cc37;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.reg_button input:hover {
+    background: #1d992d;
+}
+
+@media (max-width: 400px) {
+    .fp-container {
+        width: 90%;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .fp_title h1 {
+        font-size: 2rem;
+    }
+
+    .Newpass input, .conpass input, .email input {
+        padding: 10px 15px;
+    }
+
+    .reg_button input {
+        padding: 10px;
+    }
+}

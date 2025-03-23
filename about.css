@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(logins.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about_title {
+    color: #3cba30;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container {
+    width: 800px;
+    border: 1px solid green;
+    display: flex;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
+}
+
+.content_about {
+    color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content_about h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.content_about p {
+    font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about_title {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+
+    .content_about h2 {
+        font-size: 1.5rem;
+    }
+
+    .content_about p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .about_title {
+        font-size: 2rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .content_about h2 {
+        font-size: 1.2rem;
+    }
+
+    .content_about p {
+        font-size: 0.9rem;
+    }
+}
