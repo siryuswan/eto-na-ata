@@ -160,8 +160,8 @@ body {
         font-size: 2rem;
     }
 
-    .Username input, .Password input {
-        padding: 10px 15px;
+    .Username input, .Password input{
+        padding: 10px 40px 10px 40px;
     }
 
     .Login_button input {
