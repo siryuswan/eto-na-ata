@@ -167,4 +167,6 @@ body {
     .Login_button input {
         padding: 10px;
     }
+    ::placeholder{
+        padding: 10px;
 }
