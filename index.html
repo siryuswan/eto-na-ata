@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stutopia Login Page</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login_container">
+        <div class="login_title">
+            <h1>LOGIN</h1>
+        </div>
+        <form action="home.html">
+            <div class="Username">
+                <input type="text" id="Username" required minlength="4" maxlength="12" placeholder="Username">
+                <i class="fa fa-user"></i>
+            </div>
+            <div class="Password">
+                <input type="password" id="password" required minlength="8" maxlength="12" placeholder="Password">
+                <img src="eye-crossed.png" id="eyeiconclosed">
+                <i class="fa fa-lock"></i>
+            </div>
+            <div class="Login_button">
+                <input type="submit" name="Login" value="LOGIN" class="login_pindutan">
+            </div>
+        </form>
+        <div class="Remember_me-forget">
+            <label><input type="checkbox" id="rmbrcb"> Remember Me</label>
+            <a href="1stforgotpass.html">Forgot Password</a>
+        </div>
+        <div class="signup">
+            <p>Don't have an account?</p>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </div>
+    <script>
+        let eyeiconclosed = document.getElementById("eyeiconclosed");
+        let password = document.getElementById("password");
+
+        eyeiconclosed.onclick = function() {
+            if (password.type == "password") {
+                password.type = "text";
+                eyeiconclosed.src = "eye.png";
+            } else {
+                password.type = "password";
+                eyeiconclosed.src = "eye-crossed.png";
+            }
+        }
+    </script>
+</body>
+</html>

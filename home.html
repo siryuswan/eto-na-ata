@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stutopia</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+</head>
+<body>
+  <div class="header">
+    <div class="header_container">
+        <div class="navbar" id="navBar">
+            <a href="home.html"><h1>STUTOPIA</h1></a>
+
+          <div class="navlinks" id="navLinks">
+            <i class="fa fa-times" id="Times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="profile.html"> <i class="fas fa-user"></i>PROFILE</a></li>
+                <li><a href="about.html"><i class="fas fa-users"></i>ABOUT</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone-alt"></i>CONTACTS</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i>LOGOUT</a></li>
+            </ul>
+          </div>
+
+          <i class="fa fa-bars" id="Bars" onclick="showMenu()"></i>
+          </div>
+          
+
+        </div>
+        <div class="mainnav">
+          <div class="study"><button><a href="studyguidepage.html">Study Guides</a></div></button>
+          <div class="quiz"><button><a href="testknowledge.html">Let's Test Your Knowledge!</a></div></button>
+        </div>
+    </div>
+
+
+    <script>
+      var navLinks = document.getElementById("navLinks");
+    
+      function showMenu() {
+        navLinks.style.right = "0";
+        document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
+      }
+    
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+        document.body.style.overflow = "auto"; // Restore scrolling when menu is closed
+      }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('logins.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(#21cc37, #1d992d);
+    height: 80px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header {
+    height: 250px;
+}
+
+h1 {
+    font-size: 70px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: lightgreen;
+}
+
+.navlinks {
+    flex: 1;
+    text-align: right;
+    align-content: center;
+}
+
+.navlinks ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navlinks ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navlinks ul li:hover {
+    color: white;
+    background-color: green;
+    transition: 0.5s;
+}
+
+.fa-bars, .fa-times {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.mainnav {
+    width: 500px;
+    height: 250px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    justify-self: center;
+    top: 150px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.study, .quiz {
+    margin: 15px;
+}
+
+a {
+    color: green;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: lightgreen;
+}
+
+button {
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-33:hover {
+    box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+}
+
+#Bars, #Times{
+    display: none;
+}
+
+@media (max-width: 630px) {
+    body {
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+
+    .mainnav {
+        width: 250px;
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .navbar h1 {
+        font-size: 40px;
+        align-self: center;
+    }
+
+    .navlinks ul li {
+        display: block;
+        text-align: left;
+    }
+
+    .navlinks {
+        position: absolute;
+        background: #1d992d;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        text-align: start;
+        z-index: 2;
+        transition: 0.2s;
+    }
+
+    #Bars, #Times {
+        display: block;
+    }
+
+    
+
+    .navbar i {
+        display: block;
+    }
+
+    .study, .quiz {
+        margin: 10px 0;
+    }
+
+    .study button, .quiz button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .study a, .quiz a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar h1 {
+        font-size: 30px;
+    }
+
+    .mainnav {
+        width: 200px;
+    }
+
+    #Bars, #Times {
+        display: block;
+    }
+
+    .study button, .quiz button {
+        padding: 8px;
+    }
+
+    .study a, .quiz a {
+        font-size: 12px;
+    }
+}
